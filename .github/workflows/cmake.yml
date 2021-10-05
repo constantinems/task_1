@@ -26,7 +26,7 @@ jobs:
      -name : Application name
      -run  : |
         echo "Application name: ${{env.APPLICATION_NAME}}"
-        echo "Application name: ${{env.PACKEG_NAME}}"
+        echo "Application name: ${{env.PACKEGE_NAME}}"
     
     - uses: actions/checkout@v2
 
