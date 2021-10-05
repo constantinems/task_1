@@ -1,4 +1,8 @@
-name: CMake
+name: CMakgithub.sha
+
+env:
+  APPLICATION_NAME: "MyProgrammTask1"
+  PACKEGE_NAME    : "task_deploy_ver_${{github.sha}}"
 
 on:
   push:
@@ -19,6 +23,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+     -name : Application name
+     -run  : |
+        echo "Application name: ${{env.APPLICATION_NAME}}"
+        echo "Application name: ${{env.PACKEG_NAME}}"
+    
     - uses: actions/checkout@v2
 
     - name: Configure CMake
