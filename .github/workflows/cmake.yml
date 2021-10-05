@@ -26,7 +26,7 @@ jobs:
       run:  echo "Application name:${{env.APPLICATION_NAME}}"
        # echo "Packeg name: ${{env.PACKEGE_NAME }}"
        
-    - name: List current folder
+    - name: List current folder on the start
       run:  ls -la
     
     - uses: actions/checkout@v2
@@ -45,4 +45,7 @@ jobs:
    #   # Execute tests defined by the CMake configuration.  
    #   # See https://cmake.org/cmake/help/latest/manual/ctest.1.html for more detail
    #   run: ctest -C ${{env.BUILD_TYPE}}
+   
+    - name: List current folder on the end
+      run:  ls -la
       
