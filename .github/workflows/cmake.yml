@@ -1,9 +1,5 @@
 name: CMakgithub.sha
 
-env:
-  APPLICATION_NAME: "MyProgrammTask1"
-  PACKEGE_NAME    : "task_deploy_ver_${{github.sha}}"
-
 on:
   push:
     branches: [ main ]
@@ -13,6 +9,8 @@ on:
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   BUILD_TYPE: Release
+  APPLICATION_NAME: "MyProgrammTask1"
+  PACKEGE_NAME    : "task_deploy_ver_${{github.sha}}"
 
 jobs:
   build:
