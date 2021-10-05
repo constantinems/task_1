@@ -25,6 +25,9 @@ jobs:
     - name: Application name
       run:  echo "Application name:${{env.APPLICATION_NAME}}"
        # echo "Packeg name: ${{env.PACKEGE_NAME }}"
+       
+    - name: List current folder
+      run:  ls -la
     
     - uses: actions/checkout@v2
 
