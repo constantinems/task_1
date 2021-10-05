@@ -21,8 +21,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-   #  -name : Application name
-   #   run  : echo "Application name: ${{env.APPLICATION_NAME }}"
+    -name: Application name
+     run:  echo "Application name: ${{ env.APPLICATION_NAME }}"
        # echo "Packeg name: ${{env.PACKEGE_NAME }}"
     
     - uses: actions/checkout@v2
