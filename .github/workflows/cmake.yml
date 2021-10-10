@@ -28,9 +28,6 @@ jobs:
        # echo "Packeg name: ${{env.PACKEGE_NAME }}"
        
     - name: Install gtest manually
-    
-sudo cp -a googlemock/gtest/libgtest_main.so googlemock/gtest/libgtest.so /usr/lib/
-
       run: sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake CMakeLists.txt && sudo make && sudo cp -a googletest/include/gtest /usr/include && sudo cp -a googlemock/gtest/libgtest_main.so googlemock/gtest/libgtest.so /usr/lib/
        
     - name: List current folder on the start
