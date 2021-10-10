@@ -28,14 +28,9 @@ jobs:
        # echo "Packeg name: ${{env.PACKEGE_NAME }}"
      
      
-       
     - name: Install gtest manually
-      run: sudo apt-get install cmake && cd /usr/src/gtest && sudo mkdir build && cd build && sudo cmake .. && sudo make && sudo make install
- 
-       
-       
-  #  - name: Install gtest manually
-   #   run: sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake CMakeLists.txt && sudo make && sudo cp *.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/gtest/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/gtest/libgtest_main.a
+      run: sudo apt-get install cmake && sudo apt-get install libgtest-dev && cd /usr/src/gtest && sudo cmake CMakeLists.txt && sudo make && sudo make install
+   # sudo cp *.a /usr/lib && sudo ln -s /usr/lib/libgtest.a /usr/local/lib/gtest/libgtest.a && sudo ln -s /usr/lib/libgtest_main.a /usr/local/lib/gtest/libgtest_main.a
        
     - name: List current folder on the start
       run:  ls -la
