@@ -2,9 +2,9 @@ name: CMakgithub.sha
 
 on:
   push:
-    branches: [ first ]
+    branches: [ main]
   pull_request:
-    branches: [ first ]
+    branches: [ main]
 
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
